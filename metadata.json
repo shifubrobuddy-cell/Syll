@@ -1,0 +1,6 @@
+{
+  "name": "Scholarship Recommendation System",
+  "description": "A rule-based scholarship discovery and recommendation platform built with pure HTML5, CSS3, Vanilla JS, and institutional design system.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

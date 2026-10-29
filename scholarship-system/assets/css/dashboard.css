@@ -1,0 +1,185 @@
+/**
+ * SCHOLARSHIP RECOMMENDATION SYSTEM
+ * Dashboard Layout, Metrics, Analytics and Charts
+ * File: assets/css/dashboard.css
+ */
+
+/* Dashboard Header */
+.dashboard-header {
+    background-color: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 1.5rem 0;
+    margin-bottom: 2rem;
+}
+
+.dashboard-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.user-welcome {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user-avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-weight: 700;
+    border: 2px solid var(--accent);
+}
+
+/* Metrics Cards Grid */
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.metric-card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: var(--shadow-subtle);
+}
+
+.metric-icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.35rem;
+    flex-shrink: 0;
+}
+
+.icon-box-primary { background-color: rgba(24, 38, 61, 0.08); color: var(--primary); }
+.icon-box-gold    { background-color: var(--accent-subtle); color: #8C6A1B; }
+.icon-box-green   { background-color: var(--success-bg); color: var(--success); }
+.icon-box-amber   { background-color: var(--warning-bg); color: var(--warning); }
+.icon-box-red     { background-color: var(--danger-bg); color: var(--danger); }
+
+.metric-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.metric-value {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1.1;
+}
+
+.metric-label {
+    font-size: 0.8125rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    margin-top: 0.25rem;
+}
+
+/* Profile Completeness Gauge */
+.completeness-bar-container {
+    width: 100%;
+    height: 8px;
+    background-color: var(--surface-subtle);
+    border-radius: var(--radius-pill);
+    overflow: hidden;
+    margin: 0.5rem 0 0.25rem;
+}
+
+.completeness-bar-fill {
+    height: 100%;
+    background-color: var(--accent);
+    border-radius: var(--radius-pill);
+    transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* SVG Chart Container */
+.chart-container {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.chart-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.chart-wrapper {
+    width: 100%;
+    min-height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Admin Sidebar Layout */
+.admin-layout {
+    display: flex;
+    min-height: calc(100vh - 70px);
+}
+
+.admin-sidebar {
+    width: 260px;
+    background-color: var(--primary);
+    color: var(--text-on-dark);
+    padding: 1.5rem 0;
+    flex-shrink: 0;
+}
+
+.admin-nav {
+    list-style: none;
+}
+
+.admin-nav-item {
+    margin-bottom: 0.25rem;
+}
+
+.admin-nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1.5rem;
+    color: #CBD5E1;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    transition: all var(--transition-fast);
+}
+
+.admin-nav-link:hover,
+.admin-nav-link.active {
+    color: #FFFFFF;
+    background-color: var(--primary-light);
+    border-left: 3px solid var(--accent);
+}
+
+.admin-content {
+    flex: 1;
+    padding: 2rem;
+    background-color: var(--background);
+    overflow-x: hidden;
+}

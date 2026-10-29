@@ -1,0 +1,141 @@
+/**
+ * SCHOLARSHIP RECOMMENDATION SYSTEM
+ * Responsive Breakpoints, Mobile Navigation & Adaptive Layouts
+ * File: assets/css/responsive.css
+ */
+
+/* Desktop & Laptop Specifics */
+@media (min-width: 1024px) {
+    .navbar-menu-toggle {
+        display: none;
+    }
+}
+
+/* Tablet & Smaller Screens */
+@media (max-width: 1023px) {
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .admin-layout {
+        flex-direction: column;
+    }
+
+    .admin-sidebar {
+        width: 100%;
+        padding: 0.5rem 0;
+    }
+
+    .admin-nav {
+        display: flex;
+        overflow-x: auto;
+        padding: 0.5rem;
+    }
+
+    .admin-nav-link {
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border-left: none;
+        border-bottom: 2px solid transparent;
+        border-radius: var(--radius-sm);
+    }
+
+    .admin-nav-link:hover,
+    .admin-nav-link.active {
+        border-left: none;
+        border-bottom: 2px solid var(--accent);
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 767px) {
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.65rem; }
+    h3 { font-size: 1.35rem; }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    .main-content {
+        padding: 1.5rem 0;
+    }
+
+    .grid-4, .grid-3, .grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    /* Mobile Navbar Dropdown */
+    .nav-links-desktop {
+        display: none;
+    }
+
+    .navbar-mobile-drawer {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--surface);
+        border-top: 1px solid var(--border);
+        padding: 1rem;
+        gap: 0.5rem;
+    }
+
+    .navbar-mobile-drawer.open {
+        display: flex;
+    }
+
+    .navbar-mobile-link {
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--primary);
+        border-radius: var(--radius-sm);
+    }
+
+    .navbar-mobile-link:hover,
+    .navbar-mobile-link.active {
+        background-color: var(--surface-subtle);
+    }
+
+    /* Responsive Table Adjustments */
+    .table th, .table td {
+        padding: 0.75rem 0.875rem;
+        font-size: 0.8125rem;
+    }
+
+    /* Timeline stack */
+    .timeline {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+        padding-left: 2rem;
+    }
+
+    .timeline::before {
+        top: 20px;
+        bottom: 20px;
+        left: 36px;
+        right: auto;
+        width: 2px;
+        height: auto;
+        transform: none;
+    }
+
+    .timeline-step {
+        flex-direction: row;
+        gap: 1rem;
+        text-align: left;
+    }
+
+    .card {
+        padding: 1.15rem;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
